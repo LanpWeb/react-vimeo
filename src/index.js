@@ -226,6 +226,11 @@ if (process.env.NODE_ENV !== "production") {
      */
     start: PropTypes.number,
 
+    /**
+     * The time in seconds at which player will restart playing the video(from the start point)
+     */
+    restart: PropTypes.number,
+
     // Player parameters
     /**
      * Pause this video automatically when another one plays.
