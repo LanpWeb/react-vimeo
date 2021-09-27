@@ -97,21 +97,10 @@ class Vimeo extends React.Component {
             // It seems like this has to be done after the video has loaded, else it just starts at
             // the beginning!
 
-            console.log("restart 1 ::: ", restart);
-
             if (typeof start === "number") {
               loaded.then(() => {
                 player.setCurrentTime(start);
               });
-
-              if (typeof restart === "number") {
-                player.on("timeupdate", (event) => {
-                  console.log("time ::: ", event);
-                  if (time >= restart) {
-                    player.setCurrentTime(start);
-                  }
-                });
-              }
             }
           } else {
             player.unload();
@@ -162,12 +151,9 @@ class Vimeo extends React.Component {
       this.player.setCurrentTime(start);
     }
 
-    console.log("restart 2 ::: ", restart);
-
     if (typeof restart === "number") {
       this.player.on("timeupdate", (event) => {
-        console.log("time ::: ", event);
-        if (time >= restart) {
+        if (event.seconds >= restart) {
           this.player.setCurrentTime(start);
         }
       });
