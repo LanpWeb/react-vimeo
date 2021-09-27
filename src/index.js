@@ -105,7 +105,7 @@ class Vimeo extends React.Component {
               });
 
               if (typeof restart === "number") {
-                .player.on("timeupdate", (event) => {
+                player.on("timeupdate", (event) => {
                   console.log("time ::: ", event);
                   if (time >= restart) {
                     player.setCurrentTime(start);
@@ -161,7 +161,6 @@ class Vimeo extends React.Component {
     if (typeof start === "number") {
       this.player.setCurrentTime(start);
     }
-
 
     console.log("restart 2 ::: ", restart);
 
