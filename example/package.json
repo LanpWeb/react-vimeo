@@ -1,23 +1,18 @@
 {
   "private": true,
-  "name": "react-vimeo-example",
+  "name": "@u-wave/react-vimeo-example",
   "description": "@u-wave/react-vimeo example.",
   "version": "0.0.0-example",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "npm run build",
-    "build": "cross-env BABEL_ENV=cjs browserify -t babelify app.js > bundle.js",
+    "build": "esbuild --bundle app.js --loader:.js=jsx --sourcemap=inline --minify > bundle.js",
     "start": "serve ."
   },
   "dependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "serve": "^11.3.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "babelify": "^10.0.0",
-    "browserify": "^16.2.2",
-    "cross-env": "^7.0.0"
+    "@u-wave/react-vimeo": "file:..",
+    "esbuild": "^0.14.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "serve": "^13.0.2"
   }
 }
