@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.9.8
+ * Fix a warning about workspaces when installing with yarn. (#190)
+
+## 0.9.7
+ * Add React 18 to supported `peerDependencies` range. (@dockwarder in #189)
+ * Accept typings from React 17 and 18 … hopefully npm picks the correct version for you :)
+
+## 0.9.6
+ * Add `textTrack`, `playsInline`, `pip`, `keyboard`, `quality` props. (@thanhsonng in #178)
+
 ## 0.9.5
  * Add the `dnt` prop to the typescript definitions. (@k-p-jones in #140)
 
