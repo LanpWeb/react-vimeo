@@ -176,6 +176,11 @@ export interface VimeoProps {
   start?: number
 
   /**
+     * The time in seconds at which player will restart playing the video(from the start point)
+     */
+  restart?: number,
+
+  /**
    * Pause this video automatically when another one plays.
    */
   autopause?: boolean
